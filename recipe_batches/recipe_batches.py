@@ -3,7 +3,19 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+  recipe_values = [recipe.values()]
+  ingredient_values = [ingredients.values()]
+  #turns the keys and values into a set of tuples
+  recipe_tuple = {recipe.items()}
+  ingredients_tuple = {ingredients.items()}
+  #compare keys
+  #return amount of batches able to make after comparing keys 
+  if recipe['milk'] < ingredients['milk'] or recipe['butter'] < ingredients['butter'] or recipe['flour'] < ingredients['flour'] :
+    if recipe_values.sort() == ingredients_values.sort():
+    #math.gcd(recipe.get(recipe.values()),ingredients.get(ingredients.values())) == 0:
+      return 0
+    else:
+      return math.gcd(recipe.get(milk),ingredients.get(milk)) 
 
 
 if __name__ == '__main__':
