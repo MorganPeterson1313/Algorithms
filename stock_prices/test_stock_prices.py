@@ -1,7 +1,7 @@
 import unittest
 from stock_prices import find_max_profit 
 
-class Test(unittest.TestCase):
+class Test(unittest.TestCase): 
 
   def test_find_max_profit(self):
     self.assertEqual(find_max_profit([10, 7, 5, 8, 11, 9]), 6)
